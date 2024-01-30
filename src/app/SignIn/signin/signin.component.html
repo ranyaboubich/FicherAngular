@@ -1,0 +1,11 @@
+<form #form="ngForm" id="container" (ngSubmit)="signIn(form)">
+  <h1>Sign Up</h1>
+  <label>Enter an email:</label>
+  <input #emailInput="ngModel" email required id="email" type="text" ngModel name="email" placeholder="Email" class="form-control">
+  <label>Enter a username:</label>
+  <input #usernameInput="ngModel" required id="username" type="text" ngModel name="username" placeholder="Username" class="form-control">
+  <label>Enter a password:</label>
+  <input required id="pass" type="password" ngModel name="pass" class="form-control" placeholder="Password" minlength=4>
+
+  <button [disabled]="form.invalid" class="btn btn-danger">Sign Up</button>
+</form>
